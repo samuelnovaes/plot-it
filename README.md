@@ -1,5 +1,5 @@
-# plotserver
-Render advanced charts in browser
+# PlotServer
+Render advanced charts in browser. PlotServer uses [plotly.js](https://plot.ly/javascript/)
 
 # Usage
 ```javascript
