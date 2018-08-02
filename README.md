@@ -1,5 +1,5 @@
 # PlotServer
-Render advanced charts in browser. PlotServer uses [plotly.js](https://plot.ly/javascript/)
+Render advanced charts in browser. PlotServer uses [plotly.js](https://plot.ly/javascript/).
 
 # Install
 
@@ -33,7 +33,7 @@ plot([data1, data2], 5000, () => {
 })
 ```
 
-Visit http://localhost:5000 in your browser, and you will see that
+Visit http://localhost:5000 in your browser, and you will see that.
 
 ![image](https://raw.githubusercontent.com/samuelnovaes/plotserver/master/screenshot.png)
 
