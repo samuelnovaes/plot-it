@@ -1,6 +1,10 @@
 # PlotServer
 Render advanced charts in browser. PlotServer uses [plotly.js](https://plot.ly/javascript/)
 
+# Install
+
+`npm i plotserver`
+
 # Usage
 ```javascript
 plot(data, port, callback)
