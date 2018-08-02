@@ -1,4 +1,5 @@
 var div = document.getElementById('plot');
+var loader = document.getElementById('loader-dialog');
 
 axios.get('/data').then(function (response) {
 	Plotly.plot(div, response.data, null, {
@@ -6,4 +7,5 @@ axios.get('/data').then(function (response) {
 		scrollZoom: true,
 		displaylogo: false
 	});
+	loader.close();
 });
