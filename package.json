@@ -1,23 +1,14 @@
 {
-	"name": "plotserver",
-	"version": "0.1.1",
+	"name": "plot-it",
+	"version": "1.0.0",
 	"description": "Render advanced charts in browser",
 	"main": "index.js",
-	"directories": {
-		"test": "test"
-	},
-	"dependencies": {
-		"compression": "^1.7.3",
-		"express": "^4.16.3",
-		"serve-static": "^1.13.2"
-	},
-	"devDependencies": {},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "electron ."
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/samuelnovaes/plotserver.git"
+		"url": "https://github.com/samuelnovaes/plot-it.git"
 	},
 	"keywords": [
 		"plot",
@@ -31,7 +22,11 @@
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/samuelnovaes/plotserver/issues"
+		"url": "https://github.com/samuelnovaes/plot-it/issues"
 	},
-	"homepage": "https://github.com/samuelnovaes/plotserver#readme"
+	"homepage": "https://github.com/samuelnovaes/plot-it#readme",
+	"dependencies": {
+		"electron": "^2.0.6",
+		"plotly.js": "^1.39.4"
+	}
 }

@@ -1,19 +1,13 @@
 # PlotServer
-Render advanced charts in browser. PlotServer uses [plotly.js](https://plot.ly/javascript/).
+Render advanced charts using Node.js. Plot It uses [plotly.js](https://plot.ly/javascript/).
 
 # Install
 
-`npm i plotserver`
-
-# Usage
-```javascript
-plot(data, port, callback)
-```
+`npm i -g plot-it`
 
 # Demo
+Create a directory with the index.js file like this
 ```javascript
-const plot = require('plotserver')
-
 const data1 = {
 	x: ['A', 'B', 'C', 'D'],
 	y: [1, 2, 3, 4],
@@ -28,13 +22,16 @@ const data2 = {
 	name: 'Data 2'
 }
 
-plot([data1, data2], 5000, () => {
-	console.log('Running on port 5000')
-})
+module.exports = [data1, data2]
 ```
 
-Visit http://localhost:5000 in your browser, and you will see that.
+Enter the directory and run the `plot-it` command, and you will see it.
 
-![image](https://raw.githubusercontent.com/samuelnovaes/plotserver/master/screenshot.png)
+![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
+
+# Keybindings
+
+- **F5** Refresh
+- **F12** Open DevTools
 
 # [Reference](https://plot.ly/javascript/reference/)
