@@ -29,9 +29,4 @@ Enter the directory and run the `plot-it` command, and you will see it.
 
 ![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
 
-# Keybindings
-
-- **F5** Refresh
-- **F12** Open DevTools
-
 # [Reference](https://plot.ly/javascript/reference/)

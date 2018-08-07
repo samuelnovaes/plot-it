@@ -8,7 +8,6 @@ app.on('ready', () => {
 		icon: path.join(__dirname, 'src', 'favicon.png'),
 		show: false
 	})
-	win.setMenu(null)
 	win.loadFile(path.join(__dirname, 'src', 'index.html'))
 	win.on('ready-to-show', () => {
 		win.show()

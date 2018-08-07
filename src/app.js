@@ -17,16 +17,4 @@
 			height: innerHeight
 		})
 	}
-
-	window.onkeydown = e => {
-		switch (e.key) {
-			case 'F5':
-				history.go(0)
-				break
-			case 'F12':
-				remote.getCurrentWindow().openDevTools()
-				break
-		}
-	}
-
 })()
