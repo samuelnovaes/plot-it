@@ -1,5 +1,4 @@
 (function () {
-
 	const Plotly = require('plotly.js')
 	const div = document.getElementById('plot')
 	const remote = require('electron').remote
