@@ -11,9 +11,6 @@
 			dragmode: 'pan',
 			xaxis: {
 				scaleanchor: 'y'
-			},
-			yaxis: {
-				scaleanchor: 'x'
 			}
 		},
 		{
