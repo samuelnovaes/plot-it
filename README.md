@@ -1,6 +1,8 @@
 # Plot It
 Render advanced charts using Node.js. Plot It uses [plotly.js](https://plot.ly/javascript/).
 
+## News! Now with hot reload!
+
 # Install
 
 `npm i -g plot-it`
@@ -28,5 +30,8 @@ module.exports = [data1, data2]
 Enter the directory and run the `plot-it` command, and you will see it.
 
 ![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
+
+# Degug
+Press F12 to open DevTools.
 
 # [Reference](https://plot.ly/javascript/reference/)

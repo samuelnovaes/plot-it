@@ -1,7 +1,7 @@
 {
 	"name": "plot-it",
-	"version": "2.0.2",
-	"description": "Render advanced charts in browser",
+	"version": "2.0.3",
+	"description": "Plot advanced charts in Node.js",
 	"main": "index.js",
 	"scripts": {
 		"start": "electron ."
@@ -25,6 +25,7 @@
 	},
 	"homepage": "https://github.com/samuelnovaes/plot-it#readme",
 	"dependencies": {
+		"chokidar": "^2.0.4",
 		"electron": "^2.0.7",
 		"plotly.js": "^1.40.0"
 	},
