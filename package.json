@@ -1,6 +1,6 @@
 {
 	"name": "plot-it",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Render advanced charts in browser",
 	"main": "index.js",
 	"scripts": {
