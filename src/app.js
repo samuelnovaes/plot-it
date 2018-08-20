@@ -4,11 +4,24 @@
 	const remote = require('electron').remote
 	const data = require(remote.process.argv[2])
 
-	Plotly.newPlot(div, data, { dragmode: 'pan' }, {
-		displayModeBar: true,
-		scrollZoom: true,
-		displaylogo: false
-	})
+	Plotly.newPlot(
+		div,
+		data,
+		{
+			dragmode: 'pan',
+			xaxis: {
+				scaleanchor: 'y'
+			},
+			yaxis: {
+				scaleanchor: 'x'
+			}
+		},
+		{
+			displayModeBar: true,
+			scrollZoom: true,
+			displaylogo: false
+		}
+	)
 
 	window.onresize = () => {
 		Plotly.relayout(div, {

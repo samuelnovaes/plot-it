@@ -1,6 +1,6 @@
 {
 	"name": "plot-it",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"description": "Render advanced charts in browser",
 	"main": "index.js",
 	"scripts": {
@@ -16,8 +16,7 @@
 		"data",
 		"science",
 		"statistics",
-		"chart",
-		"server"
+		"chart"
 	],
 	"author": "Samuel Novaes <samuel.novaes.96@gmail.com>",
 	"license": "ISC",
@@ -26,8 +25,8 @@
 	},
 	"homepage": "https://github.com/samuelnovaes/plot-it#readme",
 	"dependencies": {
-		"electron": "^2.0.6",
-		"plotly.js": "^1.39.4"
+		"electron": "^2.0.7",
+		"plotly.js": "^1.40.0"
 	},
 	"bin": {
 		"plot-it": "run.js"

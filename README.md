@@ -1,4 +1,4 @@
-# PlotServer
+# Plot It
 Render advanced charts using Node.js. Plot It uses [plotly.js](https://plot.ly/javascript/).
 
 # Install
