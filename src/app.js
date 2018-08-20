@@ -1,8 +1,7 @@
 (function () {
 	const Plotly = require('plotly.js')
 	const div = document.getElementById('plot')
-	const remote = require('electron').remote
-	const data = require(remote.process.argv[2])
+	const data = require(process.cwd())
 
 	Plotly.newPlot(
 		div,
