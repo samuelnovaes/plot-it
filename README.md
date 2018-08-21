@@ -1,5 +1,5 @@
 # Plot It
-Render advanced charts using Node.js. Plot It uses [plotly.js](https://plot.ly/javascript/).
+Plot advanced charts in Node.js. Plot It uses [plotly.js](https://plot.ly/javascript/).
 
 ### With hot reload!
 
