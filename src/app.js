@@ -6,14 +6,16 @@
 	const div = document.getElementById('plot')
 	const watcher = chokidar.watch(process.cwd())
 
+	const { warn } = console
+
+	console.warn = (...args) => {
+		/^%cElectron Security Warning/.test(args[0]) || Reflect.apply(warn, console, args)
+	}
+
 	const layout = {
 		dragmode: 'pan',
 		xaxis: {
-			scaleanchor: 'y',
-			range: [-10, 10]
-		},
-		yaxis: {
-			range: [-10, 10]
+			scaleanchor: 'y'
 		}
 	}
 
