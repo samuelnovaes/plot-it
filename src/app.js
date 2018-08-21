@@ -1,11 +1,13 @@
+console = require('console');
+
 (function () {
 	const Plotly = require('plotly.js')
 	const decache = require('decache')
 	const chokidar = require('chokidar')
 	const remote = require('electron').remote
 	const div = document.getElementById('plot')
+	const error = document.getElementById('error')
 	const watcher = chokidar.watch(process.cwd())
-
 	const { warn } = console
 
 	console.warn = (...args) => {
@@ -25,7 +27,17 @@
 		displaylogo: false
 	}
 
-	Plotly.newPlot(div, require(process.cwd()), layout, options)
+	const showError = err => {
+		error.innerText = err.stack
+		error.showModal()
+	}
+
+	try {
+		Plotly.newPlot(div, require(process.cwd()), layout, options)
+	}
+	catch (err) {
+		showError(err)
+	}
 
 	window.onresize = () => {
 		Plotly.relayout(div, {
@@ -34,12 +46,14 @@
 		})
 	}
 
-	window.onkeyup = e => {
-		if (e.key === 'F12') remote.getCurrentWindow().openDevTools()
-	}
-
 	watcher.on('change', () => {
 		decache(process.cwd())
-		Plotly.react(div, require(process.cwd()), layout)
+		if (error.open) error.close()
+		try {
+			Plotly.newPlot(div, require(process.cwd()), layout)
+		}
+		catch (err) {
+			showError(err)
+		}
 	})
 })()

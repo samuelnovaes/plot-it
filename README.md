@@ -39,7 +39,4 @@ module.exports = [
 
 ![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
 
-# Debug
-Press F12 to open DevTools
-
 # [Reference](https://plot.ly/javascript/reference/)
