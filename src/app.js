@@ -7,7 +7,7 @@ console = require('console');
 	const remote = require('electron').remote
 	const div = document.getElementById('plot')
 	const error = document.getElementById('error')
-	const watcher = chokidar.watch(process.cwd(), { ignored: ['**/node_modules/**', '**/package-lock.json'] })
+	const watcher = chokidar.watch(process.cwd(), { ignored: ['**/node_modules/**', '**/package.json', '**/package-lock.json'] })
 	const { warn } = console
 
 	console.warn = (...args) => {
