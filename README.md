@@ -16,10 +16,11 @@ Plot advanced charts in Node.js. Plot It uses [plotly.js](https://plot.ly/javasc
 
 ```javascript
 const _ = require('lodash')
+const range = _.range(-10, 10, 0.1)
 
+//Functions
 const f = x => Math.sin(x)
 const g = x => x ** 2
-const range = _.range(-10, 10, 0.1)
 
 module.exports = [
 	{
@@ -30,7 +31,7 @@ module.exports = [
 	{
 		x: range,
 		y: range.map(g),
-		name: 'f(x) = x²'
+		name: 'g(x) = x²'
 	}
 ]
 ```
