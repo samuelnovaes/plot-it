@@ -46,6 +46,10 @@ console = require('console');
 		})
 	}
 
+	window.onkeyup = e => {
+		if (e.key === 'F5') history.go(0)
+	}
+
 	watcher.on('change', () => {
 		decache(process.cwd())
 		if (error.open) error.close()

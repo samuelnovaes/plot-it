@@ -9,10 +9,10 @@ Plot advanced charts in Node.js. Plot It uses [plotly.js](https://plot.ly/javasc
 
 # Demo (Using [Lodash](https://lodash.com/) to create range)
 
-- Create a directory for your project
-- Run `npm init -y`
-- Run `npm i lodash`
-- Create an index.js file
+- Create a directory for your project.
+- Run `npm init -y`.
+- Run `npm i lodash`.
+- Create an index.js file.
 
 ```javascript
 const _ = require('lodash')
@@ -36,8 +36,10 @@ module.exports = [
 ]
 ```
 
-- Run `plot-it`
+- Run `plot-it`.
 
 ![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
+
+> Press F5 to force refresh if necessary.
 
 # [Reference](https://plot.ly/javascript/reference/)
