@@ -27,8 +27,8 @@
 	"dependencies": {
 		"chokidar": "^2.0.4",
 		"decache": "^4.4.0",
-		"electron": "^2.0.7",
-		"plotly.js": "^1.40.0"
+		"electron": "^2.0.8",
+		"plotly.js": "^1.40.1"
 	},
 	"bin": {
 		"plot-it": "run.js"
