@@ -38,8 +38,12 @@ module.exports = [
 
 - Run `plot-it`.
 
-![image](https://raw.githubusercontent.com/samuelnovaes/plot-it/master/screenshot.png)
+![image](https://lh3.googleusercontent.com/u/0/d/16bKGZN3c8P7ff3yJOeubmMdkpRWMUruG=s1600-k-iv2)
 
 > Press F5 to force refresh if necessary.
+
+> Press F12 to show data table
+
+![image](https://lh3.googleusercontent.com/u/0/d/1S5cvh26qxEnCB7L_c6sjHlWjjIpXVL6e=s1600-k-iv2)
 
 # [Reference](https://plot.ly/javascript/reference/)

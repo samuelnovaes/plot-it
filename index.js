@@ -4,7 +4,7 @@ const path = require('path')
 app.on('ready', () => {
 	const win = new BrowserWindow({
 		title: 'Plot It',
-		icon: path.join(__dirname, 'src', 'favicon.png'),
+		icon: path.join(__dirname, 'src', 'img', 'favicon.png'),
 		show: false
 	})
 	win.setMenu(null)

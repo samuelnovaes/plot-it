@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Data Table</title>
+	<link rel="stylesheet" href="photon/css/photon.min.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+	<div id="app">
+		<div class="window">
+			<div class="window-content">
+				<div class="pane-group">
+					<div class="pane-sm sidebar">
+						<nav class="nav-group" v-if="charts">
+							<a :class="{'nav-group-item': true, active: chart === i}" v-for="(c, i) in charts" :key="i" @click="chart = i">
+								<span class="icon icon-chart-line"></span>
+								{{c.name || 'Unamed'}}
+							</a>
+						</nav>
+					</div>
+					<div class="pane">
+						<table class="table-striped" id="table" v-if="charts[chart]">
+							<thead>
+								<tr>
+									<th>x</th>
+									<th v-if="charts[chart].y">y</th>
+									<th v-if="charts[chart].z">z</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr v-for="(x, i) in charts[chart].x" :key="i">
+									<td>{{x}}</td>
+									<td v-if="charts[chart].y">{{charts[chart].y[i]}}</td>
+									<td v-if="charts[chart].z">{{charts[chart].z[i]}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<dialog id="error" :open="error" ref="error">{{errorMessage}}</dialog>
+	</div>
+	<script src="js/lib/vue.min.js"></script>
+	<script src="js/table.js"></script>
+</body>
+
+</html>

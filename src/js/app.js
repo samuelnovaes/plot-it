@@ -3,11 +3,11 @@ console = require('console');
 (function () {
 	const Plotly = require('plotly.js')
 	const decache = require('decache')
-	const chokidar = require('chokidar')
-	const remote = require('electron').remote
+	const path = require('path')
+	const { remote } = require('electron')
+	const watcher = require('./js/watcher')
 	const div = document.getElementById('plot')
 	const error = document.getElementById('error')
-	const watcher = chokidar.watch(process.cwd(), { ignored: ['**/node_modules/**', '**/package.json', '**/package-lock.json'] })
 	const { warn } = console
 
 	console.warn = (...args) => {
@@ -32,6 +32,32 @@ console = require('console');
 		error.showModal()
 	}
 
+	const replot = () => {
+		decache(process.cwd())
+		if (error.open) error.close()
+		try {
+			Plotly.newPlot(div, require(process.cwd()), layout)
+		}
+		catch (err) {
+			showError(err)
+		}
+	}
+
+	const showDataTable = () => {
+		const win = new remote.BrowserWindow({
+			title: 'Data Table',
+			icon: path.join(__dirname, 'img', 'favicon.png'),
+			parent: remote.getCurrentWindow(),
+			modal: true,
+			show: false
+		})
+		win.setMenu(null)
+		win.loadFile(path.join(__dirname, 'table.html'))
+		win.on('ready-to-show', () => {
+			win.show()
+		})
+	}
+
 	try {
 		Plotly.newPlot(div, require(process.cwd()), layout, options)
 	}
@@ -46,18 +72,16 @@ console = require('console');
 		})
 	}
 
-	window.onkeyup = e => {
-		if (e.key === 'F5') history.go(0)
+	window.onkeydown = e => {
+		switch (e.key) {
+			case 'F5':
+				replot()
+				break
+			case 'F12':
+				showDataTable()
+				break
+		}
 	}
 
-	watcher.on('change', () => {
-		decache(process.cwd())
-		if (error.open) error.close()
-		try {
-			Plotly.newPlot(div, require(process.cwd()), layout)
-		}
-		catch (err) {
-			showError(err)
-		}
-	})
+	watcher.on('change', replot)
 })()
