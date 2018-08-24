@@ -47,8 +47,6 @@ console = require('console');
 		const win = new remote.BrowserWindow({
 			title: 'Data Table',
 			icon: path.join(__dirname, 'img', 'favicon.png'),
-			parent: remote.getCurrentWindow(),
-			modal: true,
 			show: false
 		})
 		win.setMenu(null)
