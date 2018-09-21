@@ -1,6 +1,6 @@
 {
 	"name": "plot-it",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Plot advanced charts in Node.js",
 	"main": "index.js",
 	"scripts": {

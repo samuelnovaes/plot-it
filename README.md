@@ -7,16 +7,16 @@ Plot advanced charts in Node.js. Plot It uses [plotly.js](https://plot.ly/javasc
 
 `npm i -g plot-it`
 
-# Demo (Using [Lodash](https://lodash.com/) to create range)
+# Demo (Using [safe-range](https://github.com/samuelnovaes/safe-range) to create range)
 
 - Create a directory for your project.
 - Run `npm init -y`.
-- Run `npm i lodash`.
+- Run `npm i safe-range`.
 - Create an index.js file.
 
 ```javascript
-const _ = require('lodash')
-const range = _.range(-10, 10, 0.1)
+const range = require('safe-range')
+const r = range(-10, 10, 0.1)
 
 //Functions
 const f = x => Math.sin(x)
@@ -24,13 +24,13 @@ const g = x => x ** 2
 
 module.exports = [
 	{
-		x: range,
-		y: range.map(f),
+		x: r,
+		y: r.map(f),
 		name: 'f(x) = sin(x)'
 	},
 	{
-		x: range,
-		y: range.map(g),
+		x: r,
+		y: r.map(g),
 		name: 'g(x) = x²'
 	}
 ]
