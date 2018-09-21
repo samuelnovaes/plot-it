@@ -1,6 +1,6 @@
 {
 	"name": "plot-it",
-	"version": "2.1.2",
+	"version": "2.1.4",
 	"description": "Plot advanced charts in Node.js",
 	"main": "index.js",
 	"scripts": {
@@ -25,10 +25,10 @@
 	},
 	"homepage": "https://github.com/samuelnovaes/plot-it#readme",
 	"dependencies": {
-		"chokidar": "^2.0.4",
-		"decache": "^4.4.0",
-		"electron": "^2.0.8",
-		"plotly.js": "^1.40.1"
+		"chokidar": "*",
+		"decache": "*",
+		"electron": "*",
+		"plotly.js": "*"
 	},
 	"bin": {
 		"plot-it": "run.js"

@@ -44,6 +44,6 @@ module.exports = [
 
 > Press F12 to show data table
 
-![image](https://lh3.googleusercontent.com/u/0/d/1S5cvh26qxEnCB7L_c6sjHlWjjIpXVL6e=s1600-k-iv2)
+![image](https://lh3.googleusercontent.com/u/0/d/1S5cvh26qxEnCB7L_c6sjHlWjjIpXVL6e=s1600-k-iv3)
 
 # [Reference](https://plot.ly/javascript/reference/)
